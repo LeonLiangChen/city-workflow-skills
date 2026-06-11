@@ -1,4 +1,4 @@
-# workflow-skills
+# city-workflow-skills
 
 Team-shared AI agent skills with the `city-` prefix, compatible with the [skills CLI](https://github.com/vercel-labs/skills).
 
@@ -11,20 +11,34 @@ Team-shared AI agent skills with the `city-` prefix, compatible with the [skills
 
 ## Installation
 
-```bash
-# Install all skills
-npx skills add <repo-url>
+### Install all skills
 
-# Install a specific skill
-npx skills add <repo-url> --skill city-lark-diagram
+```bash
+npx skills add LeonLiangChen/city-workflow-skills
 ```
 
-> If the repo is private, clone it locally first, then install from the local path:
->
-> ```bash
-> git clone <repo-url> workflow-skills
-> npx skills add ./workflow-skills
-> ```
+### Install to specific AI clients
+
+```bash
+# Claude Code only
+npx skills add LeonLiangChen/city-workflow-skills -a claude-code
+
+# Multiple clients at once
+npx skills add LeonLiangChen/city-workflow-skills -a claude-code -a cursor -a opencode
+```
+
+### Install a specific skill
+
+```bash
+npx skills add LeonLiangChen/city-workflow-skills --skill city-lark-diagram
+npx skills add LeonLiangChen/city-workflow-skills --skill city-lark-solution-doc
+```
+
+### Full URL form
+
+```bash
+npx skills add https://github.com/LeonLiangChen/city-workflow-skills
+```
 
 ## Prerequisites
 
@@ -45,4 +59,4 @@ See each skill's `SKILL.md` for its specific dependencies.
    description: One-line description of what the skill does.
    ---
    ```
-2. Commit and push — teammates install with `npx skills add`.
+2. Commit and push — teammates install with `npx skills add LeonLiangChen/city-workflow-skills`.
